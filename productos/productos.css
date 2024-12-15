@@ -1,46 +1,27 @@
+/* Estilo responsivo para la sección de detalles del producto */
 .producto-detalle {
     display: flex;
     gap: 20px;
-    padding: 40px;
+    padding: 20px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en dispositivos pequeños */
 }
 
 .producto-detalle img {
-    width: 40%;
+    width: 100%; /* Ajustar ancho completo en pantallas pequeñas */
+    max-width: 400px; /* Límite máximo en dispositivos grandes */
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .producto-detalle .detalle {
-    max-width: 50%;
+    max-width: 600px; /* Ajustar el texto para evitar que ocupe demasiado espacio */
+    text-align: center; /* Centrar el texto */
 }
 
-.producto-detalle .detalle h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.producto-detalle .detalle ul {
-    list-style: disc;
-    margin: 20px 0;
-    padding-left: 20px;
-}
-
-.producto-detalle .btn {
-    background-color: #660E0E;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.producto-detalle .btn:hover {
-    background-color: #8A1717;
-}
-/* Estilo para el botón "Comprar" */
-#comprar-btn {
+/* Estilo del botón "Comprar" */
+.comprar-btn {
     background-color: #25D366; /* Color verde de WhatsApp */
     color: white;
     padding: 10px 20px;
@@ -52,6 +33,76 @@
     transition: background-color 0.3s ease;
 }
 
-#comprar-btn:hover {
+.comprar-btn:hover {
     background-color: #128C7E; /* Color más oscuro de WhatsApp */
 }
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .producto-detalle {
+        flex-direction: column; /* Cambiar la orientación a vertical */
+        text-align: center; /* Centrar contenido */
+    }
+
+    .producto-detalle img {
+        max-width: 100%; /* Asegurar que la imagen ocupe todo el ancho disponible */
+    }
+
+    .producto-detalle .detalle {
+        padding: 0 10px; /* Reducir el padding lateral */
+    }
+
+    .producto-detalle .detalle h2 {
+        font-size: 1.5rem; /* Reducir el tamaño de fuente en dispositivos pequeños */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto-detalle .detalle h2 {
+        font-size: 1.2rem; /* Tamaño aún más pequeño en dispositivos muy pequeños */
+    }
+
+    .comprar-btn {
+        padding: 8px 15px; /* Ajustar el botón en pantallas pequeñas */
+        font-size: 0.9rem;
+    }
+}
+/* Ajustar el desplazamiento del contenido para evitar que quede debajo del header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    background-color: #660E0E; /* Color del header */
+    color: white;
+    padding: 0px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el header */
+}
+
+/* Espaciado para compensar la altura del header */
+main {
+    margin-top: 70px; /* Ajusta este valor a la altura real del header */
+}
+/* Asegurar que el body y el contenedor principal ocupen toda la ventana */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Colocar el contenido y el footer en columnas */
+}
+
+/* Contenedor principal que incluye el contenido */
+main {
+    flex: 1; /* Este elemento se expandirá para llenar el espacio restante */
+}
+
+/* Footer fijo al final */
+footer {
+    background-color: #660E0E; /* Color de fondo del footer */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative; /* Puede ser estático, pero no fixed */
+}
+
