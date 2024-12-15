@@ -1,0 +1,57 @@
+.producto-detalle {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto-detalle img {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.producto-detalle .detalle {
+    max-width: 50%;
+}
+
+.producto-detalle .detalle h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.producto-detalle .detalle ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.producto-detalle .btn {
+    background-color: #660E0E;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.producto-detalle .btn:hover {
+    background-color: #8A1717;
+}
+/* Estilo para el botón "Comprar" */
+#comprar-btn {
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#comprar-btn:hover {
+    background-color: #128C7E; /* Color más oscuro de WhatsApp */
+}
