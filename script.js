@@ -59,13 +59,15 @@ const productos = [
         nombre: "Acoplado Playo",
         descripcion: "Durabilidad y versatilidad en el transporte.",
         especificaciones: ["Capacidad: 7000 kg", "Ejes dobles", "Diseño aerodinámico"],
-        imagen: "imagenes/playo-producto.png"
+        imagen: "imagenes/playo-producto.png",
+        url: "productos/acoplado-playo.html"
     },
     {
         nombre: "Carro Taller",
         descripcion: "Herramientas esenciales para el trabajo en el campo.",
         especificaciones: ["Material: Acero inoxidable", "Compatibilidad universal", "Mantenimiento sencillo"],
-        imagen: "imagenes/taller-producto.png"
+        imagen: "imagenes/taller-producto.png",
+        url: "productos/taller.html"
     }
 ];
 document.addEventListener("DOMContentLoaded", () => {
