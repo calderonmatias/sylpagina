@@ -95,3 +95,41 @@ function verDetalles(nombre) {
         alert(`Detalles de ${producto.nombre}: ${producto.descripcion}`);
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleccionar el formulario de la sección Contacto
+    const formularioContacto = document.querySelector("section.contacto form");
+
+    // Agregar evento submit
+    formularioContacto.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+        // Obtener los valores de los campos
+        const nombre = formularioContacto.nombre.value.trim();
+        const email = formularioContacto.email.value.trim();
+        const mensaje = formularioContacto.mensaje.value.trim();
+
+        // Validar los campos
+        if (!nombre || !email || !mensaje) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
+
+        // Validar formato del correo electrónico
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+
+        // Mostrar mensaje de éxito (o enviar los datos)
+        console.log("Formulario enviado:");
+        console.log("Nombre:", nombre);
+        console.log("Email:", email);
+        console.log("Mensaje:", mensaje);
+
+        alert("¡Gracias por contactarnos! Te responderemos lo antes posible.");
+
+        // Reiniciar el formulario después de enviarlo
+        formularioContacto.reset();
+    });
+});

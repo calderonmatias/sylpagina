@@ -3,48 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre del Producto</title>
+    <title>Detalle del Producto - Tolva Agrícola</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="productos.css">
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #f7f7f7, #eaeaea);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #660E0E, #8A1717);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            height: 70px;
+        }
+
+        .producto-detalle {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 1200px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto-detalle img {
+            flex: 1;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            height: auto;
+        }
+
+        .detalle {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .detalle h2 {
+            font-size: 2.5rem;
+            color: #660E0E;
+        }
+
+        .detalle p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .detalle ul {
+            padding-left: 20px;
+            list-style-type: circle;
+        }
+
+        .detalle ul li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: white;
+            background: linear-gradient(135deg, #660E0E, #8A1717);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #660E0E;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .producto-detalle {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../imagenes/logo sin eslogan updated.png " alt="Logo SyL">
-            
+            <img src="../imagenes/logo sin eslogan updated.png" alt="Logo SyL">
         </div>
-        
     </header>
+
     <main>
         <section class="producto-detalle">
             <img src="../imagenes/playo-producto.png" alt="Tolva agrícola">
             <div class="detalle">
-                <h2>Tolva Agrícola</h2>
-                <p>La Tolva Semillera Fertilizante SYL está diseñada para hacerte el día a día más fácil y aumentar tu rendimiento al máximo.</p>
+                <h2>Acoplado playo 4Tn</h2>
                 <ul>
-                    <li>Dividida al medio: Para una carga y descarga equilibrada y eficiente</li>
-                    <li>Chimango: 5.5 mts x 200 mm con multiplicador, más potencia y durabilidad.</li>
-                    <li>Sistema TAPE rápido: Simplificá la carga y descarga sin vueltas.</li>
-                    <li>Depósito inoculador: Ideal para aplicar inoculantes de manera práctica.</li>
-                    <li>Lavamanos: Porque en el campo, la limpieza también importa</li>
-                    <li>Reja trasera para depósito: Garantizá una distribución precisa y controlada.</li>
-                    <li>Rodado dual 8.25x22.5: Más estabilidad y confiabilidad en el traslado.
-                        ¿Por qué elegir esta tolva?</li>
-                    
-
-
-
-
-
-
-
-                    
+                    <li>Chasis reforzado: Construido en chapa plegada para máxima resistencia.</li>
+                    <li>Barandas laterales de 45 cm: Mayor seguridad para tu carga.</li>
+                    <li>Aro giratorio a bolillas: Movilidad precisa y confiable.</li>
+                    <li>Eje palanquilla en elásticos reforzados: Durabilidad y mejor absorción de impactos.</li>
+                    <li>Enganche trasero y paragolpes: Versatilidad para conectar otros equipos.</li>
+                    <li>Piso antideslizante: Seguridad y estabilidad al transportar.</li>
                 </ul>
                 <a href="../index.html#productos" class="btn">Regresar al Catálogo</a>
-                <a href="https://wa.link/dcjn58" target="_blank" class="btn comprar-btn">Comprar</a>
+                <a href="https://wa.link/dcjn58" target="_blank" class="btn">Comprar</a>
             </div>
         </section>
     </main>
+
     <footer>
         <p>© 2024 SyL - Soluciones Agrícolas. Todos los derechos reservados.</p>
     </footer>
